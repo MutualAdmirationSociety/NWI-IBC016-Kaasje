@@ -3,18 +3,24 @@
 # author: Jelle Loman // s4573382
 
 import random
-import statistics
+
 
 class Game:
-    def __init__(self, distance):
+    def __init__(self, distance, visualize=False):
         self.distance = distance
         self.max_distance = distance
+        self.visualize = visualize
 
     def play(self):
+        self._visualize()
         while self.distance and self.distance <= self.max_distance:
             self._throw()
+            self._visualize()
         return 0 if self.distance else 1
 
+    def _visualize(self):
+        if self.visualize:
+            print(self)
 
     def _throw(self):
         if random.randrange(0, 2):
