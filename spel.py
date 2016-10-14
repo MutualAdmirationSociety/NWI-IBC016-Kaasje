@@ -3,6 +3,7 @@
 # author: Jelle Loman // s4573382
 
 import random
+import statistics
 
 
 class Game:
