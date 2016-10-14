@@ -1,3 +1,7 @@
+# author: Hendrik Werner // s4549775
+# author: Jasper Haasdijk // s4449754
+# author: Jelle Loman // s4573382
+
 import random
 
 class Game:
