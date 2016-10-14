@@ -22,6 +22,20 @@ class Game:
         else:
             self.distance += 1
 
+    def __str__(self):
+        if self.distance:
+            if self.distance <= self.max_distance:
+                return "M" \
+                    + (self.distance - 1) * "_" \
+                    + "K" \
+                    + (self.max_distance - self.distance) * "_" \
+                    + "W"
+            else:
+                return "Failed"
+        else:
+            return "Solved"
+
+
 if __name__ == "__main__":
     n = 100
     tries = 10000
