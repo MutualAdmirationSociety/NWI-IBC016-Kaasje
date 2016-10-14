@@ -1,0 +1,18 @@
+Probleembeschrijving:
+
+Kaasje staat op de rand van een zwembad met ijskoud water en ziet een
+schoteltje heerlijk warme melk vijf meter van zichzelf verwijderd. Het
+baasje gooit telkens een eerlijk muntstuk op. Bij 'kop' mag Kaasje een
+meter vooruit richting de melk; bij 'munt' moet Kaasje een meter
+achteruit. Bereken de kans dat Kaasje de melk bereikt zonder in het
+water te vallen.
+
+Deze opgave is met de theorie van recurrente betrekkingen op te lossen.
+Dat is dan ook (hopelijk) niet zo interessant voor de computeropgave.
+
+Echter, de theorie geeft een 'theoretische kans'. Maar hoe goed past die
+bij de werkelijkheid? Schrijf een programma dat dit spel n keer speelt
+en bereken daarmee de 'empirische kans', dwz de kans die uit een
+praktijkexperiment volgt. Wat je met de computer natuurlijk kunt
+uitzoeken is hoe groot n moet zijn om maximaal 1/100 van de theoretische
+kans af te zitten met de empirische kans.
