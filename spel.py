@@ -3,6 +3,7 @@
 # author: Jelle Loman // s4573382
 
 import random
+import statistics
 
 class Game:
     def __init__(self, distance):
@@ -22,4 +23,13 @@ class Game:
             self.distance += 1
 
 if __name__ == "__main__":
-    print(Game(5).play())
+    n = 100
+    tries = 10000
+    chance = 1 / 6
+    print(
+        chance - (
+            statistics.mean(
+                [sum([Game(5).play() for i in range(n)]) for j in range(tries)]
+            ) / n
+        )
+    )
