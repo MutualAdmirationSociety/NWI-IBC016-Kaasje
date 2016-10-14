@@ -12,7 +12,7 @@ class Game:
     def play(self):
         while self.distance and self.distance <= self.max_distance:
             self._throw()
-        return self.distance == 0
+        return 1 if self.distance == 0 else 0
 
 
     def _throw(self):
