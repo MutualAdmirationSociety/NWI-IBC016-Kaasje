@@ -32,10 +32,10 @@ class Game:
         if self.distance:
             if self.distance <= self.max_distance:
                 return "M" \
-                    + (self.distance - 1) * "_" \
-                    + "K" \
-                    + (self.max_distance - self.distance) * "_" \
-                    + "W"
+                       + (self.distance - 1) * "_" \
+                       + "K" \
+                       + (self.max_distance - self.distance) * "_" \
+                       + "W"
             else:
                 return "Failed"
         else:
