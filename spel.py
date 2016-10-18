@@ -1,7 +1,7 @@
 # author: Hendrik Werner // s4549775
 # author: Jasper Haasdijk // s4449754
 # author: Jelle Loman // s4573382
-
+import argparse
 import random
 import statistics
 
@@ -44,13 +44,17 @@ class Game:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--visualize", action="store_true")
+    args = parser.parse_args()
+
     n = 100
     tries = 10000
     chance = 1 / 6
     print(
         chance - (
             statistics.mean(
-                [sum([Game(5).play() for i in range(n)]) for j in range(tries)]
+                [sum([Game(5, visualize=args.visualize).play() for i in range(n)]) for j in range(tries)]
             ) / n
         )
     )
